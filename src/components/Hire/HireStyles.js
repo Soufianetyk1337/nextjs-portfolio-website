@@ -19,11 +19,14 @@ export const HireTitle = styled.h2`
 `;
 export const HireButton = styled.a`
   display: inline-block;
-  background-color: ${(props) => props.theme.colors.firstColorLighter};
-  color: ${(props) => props.theme.colors.firstColorDark};
+  background-color: ${(props) => props.theme.colors.firstColorDark};
+  color: ${(props) => props.theme.colors.firstColorLighter};
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
   transition: 0.3s;
+  &:hover {
+    background-color: ${(props) => props.theme.colors.firstColorLight};
+  }
 `;
 export const HireDescription = styled.p`
   margin-bottom: ${(props) => props.theme.margins.mb4};

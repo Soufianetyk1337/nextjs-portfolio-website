@@ -2,51 +2,76 @@ import React from "react";
 import styled from "styled-components";
 import { projects } from "../../constants/constants";
 import {
-  Section,
-  SectionDivider,
+  SectionSubtitle,
   SectionTitle,
-  GridContainer,
-  BlogCard,
-  ExternalLink,
-  UtilityList,
-  Hr,
-  HeaderThree,
-  TitleContent,
-  Img,
-  CardInfo,
-  TagList,
-  Tag,
+  Section,
+} from "../../styles/GlobalComponents";
+import {
+  ProjectsNav,
+  ProjectItem,
+  ProjectsContainer,
+  ProjectImageLink,
+  ProjectImage,
+  ProjectContent,
+  ProjectSubtitle,
+  ProjectTitle,
+  ProjectData,
+  ProjectButton,
 } from "./ProjectsStyles";
 const Projects = (props) => (
-  <Section nopadding>
-    <SectionDivider />
-    <SectionTitle main>Projects</SectionTitle>
-    <GridContainer>
-      {projects.map((project, index) => (
-        <BlogCard>
-          <Img src={project.image} />
-          <TitleContent>
-            <HeaderThree>
-              {project.title}
-              <Hr />
-            </HeaderThree>
-          </TitleContent>
-          <CardInfo>{project.description}</CardInfo>
-          <div>
-            <TitleContent>Stack Used:</TitleContent>
-            <TagList>
-              {project.tags.map((tag, index) => (
-                <Tag key={index}>{tag}</Tag>
-              ))}
-            </TagList>
-          </div>
-          <UtilityList>
-            <ExternalLink href="https://github.com">Code</ExternalLink>
-            <ExternalLink href="https://vercel.com">Live</ExternalLink>
-          </UtilityList>
-        </BlogCard>
-      ))}
-    </GridContainer>
+  <Section id="projects">
+    <SectionSubtitle>My recent projects</SectionSubtitle>
+    <SectionTitle>Projects</SectionTitle>
+    <ProjectsNav>
+      <ProjectItem>All</ProjectItem>
+      <ProjectItem>Front End</ProjectItem>
+      <ProjectItem>Back End</ProjectItem>
+      <ProjectItem>UI</ProjectItem>
+    </ProjectsNav>
+    <ProjectsContainer className="bodyGrid">
+      <ProjectContent>
+        <ProjectImageLink>
+          <ProjectImage
+            src="/images/adidas-shoes-mockups.jpg"
+            alt="Website for Adidas Shoes"
+          />
+          <ProjectData>
+            <ProjectSubtitle>Front End</ProjectSubtitle>
+            <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+            <ProjectButton>View Live</ProjectButton>
+            <ProjectButton>View Code</ProjectButton>
+          </ProjectData>
+        </ProjectImageLink>
+      </ProjectContent>
+      <ProjectContent>
+        <ProjectImageLink>
+          <ProjectImage
+            src="/images/adidas-shoes-mockups.jpg"
+            alt="Website for Adidas Shoes"
+          />
+          <ProjectData>
+            <ProjectSubtitle>Back End</ProjectSubtitle>
+            <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+            <ProjectButton>View Live</ProjectButton>
+            <ProjectButton>View Code</ProjectButton>
+          </ProjectData>
+        </ProjectImageLink>
+      </ProjectContent>
+      <ProjectContent>
+        <ProjectImageLink>
+          <ProjectImage
+            src="/images/adidas-shoes-mockups.jpg"
+            alt="Website for Adidas Shoes"
+          />
+          <ProjectData>
+            <ProjectSubtitle>UI</ProjectSubtitle>
+            <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+            <ProjectButton>View Live</ProjectButton>
+            <ProjectButton>View Code</ProjectButton>
+          </ProjectData>
+        </ProjectImageLink>
+      </ProjectContent>
+    </ProjectsContainer>
   </Section>
 );
 export default Projects;

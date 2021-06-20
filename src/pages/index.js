@@ -17,6 +17,7 @@ const Home = () => {
       <Homepage></Homepage>
       <About></About>
       <Hire></Hire>
+      <Projects></Projects>
     </Layout>
   );
 };
