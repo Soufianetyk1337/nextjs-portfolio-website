@@ -68,6 +68,7 @@ export const SectionTitle = styled.h2`
 `;
 
 export const SectionSubtitle = styled.h3`
+  text-align: center;
   display: block;
   font-size: ${(props) => props.theme.typography.smallerFontSize};
   margin-bottom: ${(props) => props.theme.weights.fontSemiBold};

@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scroll-behavior: smooth;
-
+    font-size:18px;
   }
   body {
     margin:${(props) => props.theme.heights.headerHeight} 0 0 0;
@@ -68,6 +68,20 @@ const GlobalStyles = createGlobalStyle`
   .scrollHeader{
     background-color:${(props) => props.theme.colors.firstColorLighter};
     box-shadow:0 2px 4px rgba(0,0,0,.1);
+  }
+  #home{
+    overflow:hidden;
+    background-color:#000;
+  }
+  .bodyContainer{
+    max-width: 1024px;
+  width: calc(100% - 2rem);
+  margin-left: ${(props) => props.theme.margins.mb2};
+  margin-right: ${(props) => props.theme.margins.mb2};
+  }
+  .bodyGrid{
+     display: grid;
+  grid-gap: 1.5rem;
   }
 `;
 
