@@ -70,7 +70,7 @@ export const SectionTitle = styled.h2`
 export const SectionSubtitle = styled.h3`
   display: block;
   font-size: ${(props) => props.theme.typography.smallerFontSize};
-  margin-bottom: ${(props) => props.theme.fontWeight.fontSemiBold};
+  margin-bottom: ${(props) => props.theme.weights.fontSemiBold};
 `;
 export const SectionText = styled.p`
   max-width: 800px;

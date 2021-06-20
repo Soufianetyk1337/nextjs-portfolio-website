@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
 
   }
   body {
-    margin:${(props) => props.theme.height.headerHeight} 0 0 0;
+    margin:${(props) => props.theme.heights.headerHeight} 0 0 0;
     font-family:${(props) => props.theme.typography.bodyFont};
     font-size:${(props) => props.theme.typography.normalFontSize};
     font-weight:${(props) => props.theme.typography.fontMedium};
@@ -53,7 +53,22 @@ const GlobalStyles = createGlobalStyle`
     height:auto;
     display:block;
   }
-  
+  .activeLink{
+    position:relative;
+  }
+  .activeLink::after{
+    content:'';
+    position:absolute;
+    width:65%;
+    bottom:-.7rem;
+    left:0;
+    height:3px;
+    background-color:${(props) => props.theme.colors.firstColorLight};
+  }
+  .scrollHeader{
+    background-color:${(props) => props.theme.colors.firstColorLighter};
+    box-shadow:0 2px 4px rgba(0,0,0,.1);
+  }
 `;
 
 export default GlobalStyles;

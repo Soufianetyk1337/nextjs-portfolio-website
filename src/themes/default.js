@@ -17,7 +17,7 @@ export default {
     firstColorLighter: "#FBF9F9",
     textColor: "#524748",
   },
-  height: {
+  heights: {
     headerHeight: "3rem",
   },
   typography: {
@@ -43,7 +43,7 @@ export default {
     ztooltip: "10",
     zfixed: "100",
   },
-  fontWeight: {
+  weights: {
     fontMedium: 500,
     fontSemiBold: 600,
     fontBold: 700,
