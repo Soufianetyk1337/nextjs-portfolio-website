@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { projects } from "../../constants/constants";
+import mixitup from "mixitup";
 import {
   SectionSubtitle,
   SectionTitle,
@@ -18,60 +19,88 @@ import {
   ProjectData,
   ProjectButton,
 } from "./ProjectsStyles";
-const Projects = (props) => (
-  <Section id="projects">
-    <SectionSubtitle>My recent projects</SectionSubtitle>
-    <SectionTitle>Projects</SectionTitle>
-    <ProjectsNav>
-      <ProjectItem>All</ProjectItem>
-      <ProjectItem>Front End</ProjectItem>
-      <ProjectItem>Back End</ProjectItem>
-      <ProjectItem>UI</ProjectItem>
-    </ProjectsNav>
-    <ProjectsContainer className="bodyGrid">
-      <ProjectContent>
-        <ProjectImageLink>
-          <ProjectImage
-            src="/images/adidas-shoes-mockups.jpg"
-            alt="Website for Adidas Shoes"
-          />
-          <ProjectData>
-            <ProjectSubtitle>Front End</ProjectSubtitle>
-            <ProjectTitle>Latest Front End Work Made </ProjectTitle>
-            <ProjectButton>View Live</ProjectButton>
-            <ProjectButton>View Code</ProjectButton>
-          </ProjectData>
-        </ProjectImageLink>
-      </ProjectContent>
-      <ProjectContent>
-        <ProjectImageLink>
-          <ProjectImage
-            src="/images/adidas-shoes-mockups.jpg"
-            alt="Website for Adidas Shoes"
-          />
-          <ProjectData>
-            <ProjectSubtitle>Back End</ProjectSubtitle>
-            <ProjectTitle>Latest Front End Work Made </ProjectTitle>
-            <ProjectButton>View Live</ProjectButton>
-            <ProjectButton>View Code</ProjectButton>
-          </ProjectData>
-        </ProjectImageLink>
-      </ProjectContent>
-      <ProjectContent>
-        <ProjectImageLink>
-          <ProjectImage
-            src="/images/adidas-shoes-mockups.jpg"
-            alt="Website for Adidas Shoes"
-          />
-          <ProjectData>
-            <ProjectSubtitle>UI</ProjectSubtitle>
-            <ProjectTitle>Latest Front End Work Made </ProjectTitle>
-            <ProjectButton>View Live</ProjectButton>
-            <ProjectButton>View Code</ProjectButton>
-          </ProjectData>
-        </ProjectImageLink>
-      </ProjectContent>
-    </ProjectsContainer>
-  </Section>
-);
+const Projects = (props) => {
+  const projectNavLinks = document.querySelectorAll("[data-filter]");
+  function activeProjectLink() {
+    if (projectNavLinks) {
+      projectNavLinks.forEach((link) =>
+        link.classList.remove("activePtojectNavLink")
+      );
+      this.classList.add("activePtojectNavLink");
+    }
+  }
+  React.useEffect(() => {
+    var mixer = mixitup(".containerEl", {
+      selectors: {
+        target: ".content",
+      },
+      animation: {
+        duration: 400,
+      },
+    });
+  }, []);
+  React.useEffect(() => {
+    projectNavLinks.forEach((link) =>
+      link.addEventListener("click", activeProjectLink)
+    );
+  }, [activeProjectLink]);
+  return (
+    <Section id="projects">
+      <SectionSubtitle>My recent projects</SectionSubtitle>
+      <SectionTitle>Projects</SectionTitle>
+      <ProjectsNav>
+        <ProjectItem data-filter="all" className="activePtojectNavLink">
+          All
+        </ProjectItem>
+        <ProjectItem data-filter=".frontend">Front End</ProjectItem>
+        <ProjectItem data-filter=".backend">Back End</ProjectItem>
+        <ProjectItem data-filter=".ui">UI</ProjectItem>
+      </ProjectsNav>
+      <ProjectsContainer className="bodyGrid containerEl">
+        <ProjectContent className="mix content frontend">
+          <ProjectImageLink>
+            <ProjectImage
+              src="/images/adidas-shoes-mockups.jpg"
+              alt="Website for Adidas Shoes"
+            />
+            <ProjectData>
+              <ProjectSubtitle>Front End</ProjectSubtitle>
+              <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+              <ProjectButton>View Live</ProjectButton>
+              <ProjectButton>View Code</ProjectButton>
+            </ProjectData>
+          </ProjectImageLink>
+        </ProjectContent>
+        <ProjectContent className="mix content backend">
+          <ProjectImageLink>
+            <ProjectImage
+              src="/images/adidas-shoes-mockups.jpg"
+              alt="Website for Adidas Shoes"
+            />
+            <ProjectData>
+              <ProjectSubtitle>Back End</ProjectSubtitle>
+              <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+              <ProjectButton>View Live</ProjectButton>
+              <ProjectButton>View Code</ProjectButton>
+            </ProjectData>
+          </ProjectImageLink>
+        </ProjectContent>
+        <ProjectContent className="mix content ui">
+          <ProjectImageLink>
+            <ProjectImage
+              src="/images/adidas-shoes-mockups.jpg"
+              alt="Website for Adidas Shoes"
+            />
+            <ProjectData>
+              <ProjectSubtitle>UI</ProjectSubtitle>
+              <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+              <ProjectButton>View Live</ProjectButton>
+              <ProjectButton>View Code</ProjectButton>
+            </ProjectData>
+          </ProjectImageLink>
+        </ProjectContent>
+      </ProjectsContainer>
+    </Section>
+  );
+};
 export default Projects;

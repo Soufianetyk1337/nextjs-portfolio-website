@@ -83,6 +83,10 @@ const GlobalStyles = createGlobalStyle`
      display: grid;
   grid-gap: 1.5rem;
   }
+  .activePtojectNavLink{
+    color:${(props) => props.theme.colors.firstColorDark};;
+    font-weight:${(props) => props.theme.weights.fontSemiBold};;
+  }
 `;
 
 export default GlobalStyles;
