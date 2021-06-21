@@ -1,5 +1,6 @@
 import React from "react";
 import mixitup from "mixitup";
+
 import {
   SectionSubtitle,
   SectionTitle,
@@ -27,6 +28,7 @@ const Projects = (props) => {
       this.classList.add("activePtojectNavLink");
     }
   }
+
   React.useEffect(() => {
     var mixer = mixitup(".containerEl", {
       selectors: {
@@ -36,8 +38,6 @@ const Projects = (props) => {
         duration: 400,
       },
     });
-  }, []);
-  React.useEffect(() => {
     projectNavLinks.forEach((link) =>
       link.addEventListener("click", activeProjectLink)
     );
