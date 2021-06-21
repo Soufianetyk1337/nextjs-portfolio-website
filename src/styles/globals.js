@@ -36,6 +36,11 @@ const GlobalStyles = createGlobalStyle`
     line-height:1.6;
     color:${(props) => props.theme.colors.textColor}
   }
+  @media ${(props) => props.theme.breakpoints.md} {
+    body{
+        margin:0;
+    }
+  }
   h1,h2,h3,h4,h5,h6,button {
     font-family: ${(props) => props.theme.fonts.title};
   }
@@ -78,6 +83,10 @@ const GlobalStyles = createGlobalStyle`
   width: calc(100% - 2rem);
   margin-left: ${(props) => props.theme.margins.mb2};
   margin-right: ${(props) => props.theme.margins.mb2};
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+  margin-left:auto;
+  margin-right:auto;
   }
   .bodyGrid{
      display: grid;

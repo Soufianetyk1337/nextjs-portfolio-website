@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { projects } from "../../constants/constants";
 import mixitup from "mixitup";
 import {
   SectionSubtitle,
@@ -43,7 +41,13 @@ const Projects = (props) => {
     projectNavLinks.forEach((link) =>
       link.addEventListener("click", activeProjectLink)
     );
+    return () => {
+      projectNavLinks.forEach((link) =>
+        link.removeEventListener("click", activeProjectLink)
+      );
+    };
   }, [activeProjectLink]);
+
   return (
     <Section id="projects">
       <SectionSubtitle>My recent projects</SectionSubtitle>
@@ -67,7 +71,7 @@ const Projects = (props) => {
               <ProjectSubtitle>Front End</ProjectSubtitle>
               <ProjectTitle>Latest Front End Work Made </ProjectTitle>
               <ProjectButton>View Live</ProjectButton>
-              <ProjectButton>View Code</ProjectButton>
+              {/* <ProjectButton>View Code</ProjectButton> */}
             </ProjectData>
           </ProjectImageLink>
         </ProjectContent>
@@ -79,9 +83,9 @@ const Projects = (props) => {
             />
             <ProjectData>
               <ProjectSubtitle>Back End</ProjectSubtitle>
-              <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+              <ProjectTitle>Latest Back End Work Made </ProjectTitle>
               <ProjectButton>View Live</ProjectButton>
-              <ProjectButton>View Code</ProjectButton>
+              {/* <ProjectButton>View Code</ProjectButton> */}
             </ProjectData>
           </ProjectImageLink>
         </ProjectContent>
@@ -93,9 +97,9 @@ const Projects = (props) => {
             />
             <ProjectData>
               <ProjectSubtitle>UI</ProjectSubtitle>
-              <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+              <ProjectTitle>Latest UI Work Made </ProjectTitle>
               <ProjectButton>View Live</ProjectButton>
-              <ProjectButton>View Code</ProjectButton>
+              {/* <ProjectButton>View Code</ProjectButton> */}
             </ProjectData>
           </ProjectImageLink>
         </ProjectContent>

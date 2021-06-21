@@ -6,11 +6,13 @@ export const Navbar = styled.nav`
   justify-content: space-between;
   align-items: center;
   @media ${(props) => props.theme.breakpoints.md} {
+    height: calc(${(props) => props.theme.heights.headerHeight} + 1.5rem);
   }
 `;
 
 export const NavMenu = styled.div`
-  @media ${(props) => props.theme.breakpoints.md} {
+  top: ${(props) => props.theme.heights.headerHeight};
+  ${(props) => props.theme.breakpoints.md} {
     position: fixed;
     top: ${(props) =>
       props.toggle ? props.theme.heights.headerHeight : "-100%"};
@@ -29,6 +31,10 @@ export const NavMenu = styled.div`
 
 export const NavItem = styled.li`
   margin-bottom: ${(props) => props.theme.margins.mb3};
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-left: ${(props) => props.theme.margins.mb5};
+    margin-bottom: 0;
+  }
 `;
 export const NavLink = styled.a`
   color: ${(props) => props.theme.colors.firstColorLighter};
@@ -37,11 +43,17 @@ export const NavLink = styled.a`
     color: ${(props) => props.theme.colors.firstColorLight};
   }
 `;
-export const NavList = styled.ul``;
+export const NavList = styled.ul`
+  @media ${(props) => props.theme.breakpoints.md} {
+  }
+`;
 export const NavToggle = styled.a`
   color: ${(props) => props.theme.colors.firstColorLighter};
   font-size: 1.3rem;
   cursor: pointer;
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: none;
+  }
 `;
 export const NavLogo = styled.a`
   color: ${(props) => props.theme.colors.firstColorLighter};

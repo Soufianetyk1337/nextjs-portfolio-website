@@ -8,6 +8,7 @@ import Timeline from "../components/TimeLine/TimeLine";
 import Homepage from "../components/Homepage/Homepage";
 import About from "../components/About/About";
 import Hire from "../components/Hire/Hire";
+import Footer from "../components/Footer/Footer";
 import { Layout } from "../layout/Layout";
 import { Section } from "../styles/GlobalComponents";
 
@@ -18,6 +19,7 @@ const Home = () => {
       <About></About>
       <Hire></Hire>
       <Projects></Projects>
+      <Footer></Footer>
     </Layout>
   );
 };

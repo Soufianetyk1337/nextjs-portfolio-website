@@ -2,25 +2,8 @@ import styled from "styled-components";
 
 export const Section = styled.section`
   padding: ${(props) => (props.nopadding ? "0" : "4rem 0 2rem")};
-  /* display: ${(props) => (props.grid ? "grid" : "flex")};
-  flex-direction: ${(props) => (props.row ? "row" : "column")};
-  margin: 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
-  position: relative;
-  overflow: hidden;
-  grid-template-columns: 1fr 1fr; */
-
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 24px 48px 0;
-    flex-direction: column;
-  }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: ${(props) => (props.nopadding ? "0" : "16px 16px 0")};
-
-    width: calc(100vw - 32px);
-    flex-direction: column;
+    /* padding: 6rem; */
   }
 `;
 export const BodyContainer = styled.div`
@@ -37,6 +20,9 @@ export const SectionTitle = styled.h2`
   text-align: center;
   font-size: ${(props) => props.theme.typography.h1FontSize};
   margin-bottom: ${(props) => props.theme.margins.mb3};
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-bottom: ${(props) => props.theme.margins.mb5};
+  }
   /* font-weight: 800;
   font-size: ${(props) => (props.main ? "65px" : "56px")};
   line-height: ${(props) => (props.main ? "72px" : "56px")};

@@ -8,7 +8,15 @@ export const ProjectItem = styled.span`
   margin: 0 ${(props) => props.theme.margins.mb2};
   cursor: pointer;
 `;
-export const ProjectsContainer = styled.div``;
+export const ProjectsContainer = styled.div`
+  @media ${(props) => props.theme.breakpoints.md} {
+    padding: 4.5rem 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
 export const ProjectData = styled.div`
   padding: 1.5rem;
 `;
