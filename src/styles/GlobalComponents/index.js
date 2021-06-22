@@ -11,6 +11,10 @@ export const BodyContainer = styled.div`
   width: calc(100% - 2rem);
   margin-left: ${(props) => props.theme.margins.mb2};
   margin-right: ${(props) => props.theme.margins.mb2};
+  @media ${(props) => props.theme.breakpoints.md} {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 export const BodyGrid = styled.div`
   display: grid;

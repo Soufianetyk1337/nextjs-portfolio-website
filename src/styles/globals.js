@@ -83,10 +83,14 @@ const GlobalStyles = createGlobalStyle`
   width: calc(100% - 2rem);
   margin-left: ${(props) => props.theme.margins.mb2};
   margin-right: ${(props) => props.theme.margins.mb2};
-  }
-  @media ${(props) => props.theme.breakpoints.lg} {
+  @media ${(props) => props.theme.breakpoints.md} {
   margin-left:auto;
   margin-right:auto;
+  }
+   @media ${(props) => props.theme.breakpoints.lg} {
+    margin-left: auto;
+    margin-right: auto;
+  }
   }
   .bodyGrid{
      display: grid;

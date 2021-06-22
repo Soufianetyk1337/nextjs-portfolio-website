@@ -1,20 +1,21 @@
 export const projects = [
   {
-    title: "Project Title 1",
+    title: "Personal Portfolio",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, qui.",
     image: "/url/image.png",
-    tags: ["Tech1", "Tech2"],
+    tags: ["Nextjs", "styled-components"],
+    type: "frontend",
     source: "https://google.com",
     visit: "https://google.com",
     id: 0,
   },
   {
-    title: "Project Title 2",
+    title: "Ecommerce From Scratch",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, qui.",
     image: "/url/image.png",
-    tags: ["Tech1", "Tech2"],
+    tags: ["React", "Firebase", "Stripe", "Redux-Saga"],
     source: "https://google.com",
     visit: "https://google.com",
     id: 1,

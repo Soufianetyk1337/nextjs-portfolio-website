@@ -10,7 +10,7 @@ export const ProjectItem = styled.span`
 `;
 export const ProjectsContainer = styled.div`
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 4.5rem 0;
+    padding: 4.5rem 1rem;
     grid-template-columns: repeat(2, 1fr);
   }
   @media ${(props) => props.theme.breakpoints.lg} {
@@ -38,7 +38,7 @@ export const ProjectImage = styled.img`
   transition: 0.4s;
 `;
 export const ProjectImageLink = styled.a``;
-export const ProjectButton = styled.a`
+export const ProjectButton = styled.button`
   display: inline-block;
   background-color: ${(props) => props.theme.colors.firstColorDark};
   color: ${(props) => props.theme.colors.firstColorLighter};

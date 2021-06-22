@@ -58,7 +58,7 @@ const Projects = (props) => {
         </ProjectItem>
         <ProjectItem data-filter=".frontend">Front End</ProjectItem>
         <ProjectItem data-filter=".backend">Back End</ProjectItem>
-        <ProjectItem data-filter=".ui">UI</ProjectItem>
+        <ProjectItem data-filter=".fullstack">Full Stack</ProjectItem>
       </ProjectsNav>
       <ProjectsContainer className="bodyGrid containerEl">
         <ProjectContent className="mix content frontend">
@@ -89,15 +89,15 @@ const Projects = (props) => {
             </ProjectData>
           </ProjectImageLink>
         </ProjectContent>
-        <ProjectContent className="mix content ui">
+        <ProjectContent className="mix content fullstack">
           <ProjectImageLink>
             <ProjectImage
               src="/images/adidas-shoes-mockups.jpg"
               alt="Website for Adidas Shoes"
             />
             <ProjectData>
-              <ProjectSubtitle>UI</ProjectSubtitle>
-              <ProjectTitle>Latest UI Work Made </ProjectTitle>
+              <ProjectSubtitle>Full Stack</ProjectSubtitle>
+              <ProjectTitle>Latest Full Stack Work Made </ProjectTitle>
               <ProjectButton>View Live</ProjectButton>
               {/* <ProjectButton>View Code</ProjectButton> */}
             </ProjectData>
