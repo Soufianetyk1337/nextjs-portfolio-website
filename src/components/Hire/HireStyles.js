@@ -19,8 +19,8 @@ export const HireTitle = styled.h2`
 `;
 export const HireButton = styled.a`
   display: inline-block;
-  background-color: ${(props) => props.theme.colors.firstColorDark};
-  color: ${(props) => props.theme.colors.firstColorLighter};
+  background-color: ${(props) => props.theme.colors.firstColorLight};
+  color: ${(props) => props.theme.colors.firstColorDark};
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
   transition: 0.3s;

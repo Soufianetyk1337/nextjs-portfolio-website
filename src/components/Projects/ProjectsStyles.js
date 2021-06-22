@@ -59,3 +59,36 @@ export const ProjectTitle = styled.h2`
   color: ${(props) => props.theme.colors.firstColor};
   margin: ${(props) => props.theme.margins.mb2} 0;
 `;
+
+export const TechnologiesGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  align-items: center;
+  justify-content: center;
+  grid-gap: 1rem;
+  margin: 1rem 0;
+`;
+export const TechnologiesItem = styled.a`
+  font-weight: 500;
+  font-size: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  align-items: baseline;
+  display: inline-flex;
+  border-radius: 9999px;
+  background-color: rgba(247, 247, 247, 1);
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  &:hover {
+    box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
+  }
+`;

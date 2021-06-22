@@ -96,7 +96,7 @@ const GlobalStyles = createGlobalStyle`
      display: grid;
   grid-gap: 1.5rem;
   }
-  .activePtojectNavLink{
+  .activeProjectNavLink{
     color:${(props) => props.theme.colors.firstColorDark};;
     font-weight:${(props) => props.theme.weights.fontSemiBold};;
   }
