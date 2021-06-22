@@ -1,5 +1,7 @@
 import React from "react";
 import mixitup from "mixitup";
+import { SiStyledComponents } from "react-icons/si";
+import { RiRadioButtonLine } from "react-icons/ri";
 
 import {
   SectionSubtitle,
@@ -19,6 +21,9 @@ import {
   ProjectButton,
   TechnologiesGrid,
   TechnologiesItem,
+  TechnologieImage,
+  ProjectLive,
+  ProjectLiveIcon,
 } from "./ProjectsStyles";
 const Projects = (props) => {
   const projectNavLinks = document.querySelectorAll("[data-filter]");
@@ -71,7 +76,15 @@ const Projects = (props) => {
             />
             <ProjectData>
               <ProjectSubtitle>Front End</ProjectSubtitle>
-              <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+              <ProjectLive>
+                <ProjectTitle>Latest Front End Work Made </ProjectTitle>
+                <RiRadioButtonLine
+                  style={{
+                    fontSize: "1.75rem",
+                    color: "red",
+                  }}
+                />
+              </ProjectLive>
               <ProjectButton>View Live</ProjectButton>
               {/* <ProjectButton>View Code</ProjectButton> */}
             </ProjectData>
@@ -92,7 +105,7 @@ const Projects = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                     focusable="false"
                     style={{
-                      width: "1.75rem",
+                      width: "2.25rem",
                       height: "1.75rem",
                       alignSelf: "center",
                       paddingRight: " .5rem",
@@ -113,7 +126,7 @@ const Projects = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                     focusable="false"
                     style={{
-                      width: "1.75rem",
+                      width: "2.25rem",
                       height: "1.75rem",
                       alignSelf: "center",
                       paddingRight: " .5rem",
@@ -146,66 +159,33 @@ const Projects = (props) => {
                     xmlns="http://www.w3.org/2000/svg"
                     focusable="false"
                     style={{
-                      width: "1.75rem",
+                      width: "2.25rem",
                       height: "1.75rem",
                       alignSelf: "center",
                       paddingRight: " .5rem",
                       transform: "rotate(360deg)",
                     }}
                     preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 256 228"
+                    viewBox="0 0 512 309"
                   >
-                    <defs>
-                      <linearGradient
-                        x1="-2.778%"
-                        y1="32%"
-                        x2="100%"
-                        y2="67.556%"
-                        id="IconifyId-17a33f6abcb-f037ab-0"
-                      >
-                        <stop stopColor="#2298BD" offset="0%"></stop>
-                        <stop stopColor="#0ED7B5" offset="100%"></stop>
-                      </linearGradient>
-                    </defs>
                     <path
-                      d="M128 0C93.867 0 72.533 17.067 64 51.2C76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2c-12.8 17.067-27.733 23.467-44.8 19.2c-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2c9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2c-12.8 17.067-27.733 23.467-44.8 19.2c-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z"
-                      fill="url(#IconifyId-17a33f6abcb-f037ab-0)"
+                      d="M120.81 80.561h96.568v7.676h-87.716v57.767h82.486v7.675h-82.486v63.423h88.722v7.675H120.81V80.561zm105.22 0h10.26l45.467 63.423L328.23 80.56L391.441 0l-103.85 150.65l53.515 74.127h-10.663l-48.686-67.462l-48.888 67.462h-10.461l53.917-74.128l-50.296-70.088zm118.898 7.676V80.56h110.048v7.676h-50.699v136.54h-8.852V88.237h-50.497zM0 80.56h11.065l152.58 228.323l-63.053-84.107L9.254 91.468l-.402 133.31H0V80.56zm454.084 134.224c-1.809 0-3.165-1.4-3.165-3.212c0-1.81 1.356-3.212 3.165-3.212c1.83 0 3.165 1.401 3.165 3.212c0 1.811-1.335 3.212-3.165 3.212zm8.698-8.45h4.737c.064 2.565 1.937 4.29 4.693 4.29c3.079 0 4.823-1.854 4.823-5.325v-21.99h4.823v22.011c0 6.252-3.617 9.853-9.603 9.853c-5.62 0-9.473-3.493-9.473-8.84zm25.384-.28h4.78c.409 2.953 3.294 4.828 7.45 4.828c3.875 0 6.717-2.005 6.717-4.764c0-2.371-1.809-3.794-5.921-4.764l-4.005-.97c-5.62-1.316-8.181-4.032-8.181-8.602c0-5.54 4.521-9.227 11.303-9.227c6.308 0 10.916 3.686 11.196 8.925h-4.694c-.452-2.867-2.95-4.657-6.567-4.657c-3.81 0-6.35 1.833-6.35 4.635c0 2.22 1.635 3.493 5.683 4.441l3.423.841c6.373 1.488 9 4.075 9 8.753c0 5.95-4.607 9.68-11.97 9.68c-6.89 0-11.52-3.558-11.864-9.12z"
+                      fill="#000"
                     ></path>
                   </svg>
-                  Tailwind
+                  <span>NextJS</span>
                 </TechnologiesItem>
                 <TechnologiesItem>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    focusable="false"
+                  <SiStyledComponents
                     style={{
-                      width: "1.75rem",
+                      width: "2.25rem",
                       height: "1.75rem",
                       alignSelf: "center",
                       paddingRight: " .5rem",
                       transform: "rotate(360deg)",
                     }}
-                    preserveAspectRatio="xMidYMid meet"
-                    viewBox="0 0 256 228"
-                  >
-                    <defs>
-                      <linearGradient
-                        x1="-2.778%"
-                        y1="32%"
-                        x2="100%"
-                        y2="67.556%"
-                        id="IconifyId-17a33f6abcb-f037ab-0"
-                      >
-                        <stop stopColor="#2298BD" offset="0%"></stop>
-                        <stop stopColor="#0ED7B5" offset="100%"></stop>
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M128 0C93.867 0 72.533 17.067 64 51.2C76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2c-12.8 17.067-27.733 23.467-44.8 19.2c-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2c9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2c-12.8 17.067-27.733 23.467-44.8 19.2c-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8z"
-                      fill="url(#IconifyId-17a33f6abcb-f037ab-0)"
-                    ></path>
-                  </svg>
-                  Tailwind
+                  />
+                  Styled
                 </TechnologiesItem>
               </TechnologiesGrid>
               <ProjectButton>View Live</ProjectButton>

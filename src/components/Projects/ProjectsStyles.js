@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const ProjectsNav = styled.div`
   text-align: center;
@@ -91,4 +91,17 @@ export const TechnologiesItem = styled.a`
     -webkit-box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
   }
+`;
+export const TechnologieImage = styled.img`
+  width: 1.75rem;
+  height: 1.75rem;
+  align-self: center;
+  padding-right: 0.5rem;
+  transform: rotate(360deg);
+`;
+
+export const ProjectLive = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
