@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
-    margin: 0;
+    margin: 0 ;
     padding: 0;
   }
   html {
@@ -100,6 +100,8 @@ const GlobalStyles = createGlobalStyle`
     color:${(props) => props.theme.colors.firstColorDark};;
     font-weight:${(props) => props.theme.weights.fontSemiBold};;
   }
+  
+  
 `;
 
 export default GlobalStyles;

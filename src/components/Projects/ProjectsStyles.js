@@ -105,3 +105,15 @@ export const ProjectLive = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+export const pulse = keyframes`
+from {box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);}
+to {box-shadow: 0 0 0 20px red;}
+`;
+export const ProjectLiveIcon = styled.div`
+  & > svg {
+    animation: ${pulse} 1.2s ease-in-out;
+    animation-iteration-count: infinite;
+    font-size: 2rem;
+    color: red;
+  }
+`;

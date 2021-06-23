@@ -2,7 +2,6 @@ import Acomplishments from "../components/Acomplishments/Acomplishments";
 import BgAnimation from "../components/BackgroundAnimation/BackgroundAnimation";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
-// import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import Timeline from "../components/TimeLine/TimeLine";
 import Homepage from "../components/Homepage/Homepage";
@@ -22,6 +21,7 @@ const Home = () => {
       <Homepage></Homepage>
       <About></About>
       <Hire></Hire>
+      <Technologies />
       <Projects />
       <Footer></Footer>
     </Layout>
