@@ -15,10 +15,14 @@ import {
   HomepageSocialContainer,
   SocialIcon,
 } from "./HomepageStyles";
-
+import Particles from "react-particles-js";
+import particlesJConfig from "./../../../particlesjs-config.json";
 function Homepage() {
   return (
-    <Section id="home">
+    <Section id="home" style={{ position: "relative", overflow: "hidden" }}>
+      <div style={{ position: "absolute" }}>
+        <Particles height="100vh" width="100vw" params={particlesJConfig} />
+      </div>
       <HomepageContainer className="bodyContainer bodyGrid">
         <HomepageData>
           <HomepageGreeting>Hello 👋,My name is</HomepageGreeting>

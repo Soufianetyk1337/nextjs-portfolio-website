@@ -1,19 +1,16 @@
 import React from "react";
-import {
-  List,
-  ListContainer,
-  ListItem,
-  ListParagraph,
-  ListTitle,
-} from "./TechnologiesStyles";
+import { List, ListItem, ListParagraph } from "./TechnologiesStyles";
 import {
   DiFirebase,
   DiReact,
   DiZend,
   DiNodejs,
   DiMongodb,
+  DiAws,
   DiLaravel,
   DiJavascript,
+  DiHtml5,
+  DiCss3,
   DiDocker,
 } from "react-icons/di";
 import {
@@ -33,6 +30,45 @@ const Technologies = (props) => (
         update this section more often.
       </SectionText>
       <List>
+        <ListItem>
+          <DiHtml5
+            size="3rem"
+            style={{
+              background: "#fff",
+              color: "#020061",
+              display: "flex",
+              alignItems: "center",
+              height: "100%",
+            }}
+          />
+          <ListParagraph>HTML5</ListParagraph>
+        </ListItem>
+        <ListItem>
+          <DiCss3
+            size="3rem"
+            style={{
+              background: "#fff",
+              color: "#020061",
+              display: "flex",
+              alignItems: "center",
+              height: "100%",
+            }}
+          />
+          <ListParagraph>CSS3</ListParagraph>
+        </ListItem>
+        <ListItem>
+          <DiJavascript
+            size="3rem"
+            style={{
+              background: "#fff",
+              color: "#020061",
+              display: "flex",
+              alignItems: "center",
+              height: "100%",
+            }}
+          />
+          <ListParagraph>JavaScript</ListParagraph>
+        </ListItem>
         <ListItem>
           <DiReact
             size="3rem"
@@ -58,6 +94,19 @@ const Technologies = (props) => (
             }}
           />
           <ListParagraph>Firebase</ListParagraph>
+        </ListItem>
+        <ListItem>
+          <DiAws
+            size="3rem"
+            style={{
+              background: "#fff",
+              color: "#020061",
+              display: "flex",
+              alignItems: "center",
+              height: "100%",
+            }}
+          />
+          <ListParagraph>AWS</ListParagraph>
         </ListItem>
         <ListItem>
           <DiNodejs
