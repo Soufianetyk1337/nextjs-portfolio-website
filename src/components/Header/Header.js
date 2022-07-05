@@ -1,26 +1,17 @@
-import React from "react";
-import { BodyContainer } from "../../styles/GlobalComponents/index.js";
-import Nav from "../Nav/Nav";
-import { HeaderContainer } from "./HeaderStyles.js";
-function scrollHeader() {
-  const header = document.getElementById("header");
-  if (this.scrollY >= 200) header.classList.add("scrollHeader");
-  else header.classList.remove("scrollHeader");
-}
-const Header = () => {
+import React from 'react';
+import { BodyContainer } from '../../styles/GlobalComponents';
+import Nav from '../Nav/Nav';
+import { HeaderContainer } from './HeaderStyles';
+
+function Header() {
+  // eslint-disable-next-line no-unused-vars
   const [isHeaderScrolled, setIsHeaderScrolled] = React.useState(false);
-  // React.useLayoutEffect(() => {
-  //   let headerClasses = document.getElementById("header").classList;
-  //   headerClasses = Array.prototype.slice.call(headerClasses, 0);
-  //   setIsHeaderScrolled(headerClasses.includes("scrollHeader"));
-  //   window.addEventListener("scroll", scrollHeader);
-  // }, [isHeaderScrolled]);
   return (
     <HeaderContainer id="header" className="">
       <BodyContainer>
-        <Nav isHeaderScrolled={isHeaderScrolled}></Nav>
+        <Nav isHeaderScrolled={isHeaderScrolled} />
       </BodyContainer>
     </HeaderContainer>
   );
-};
+}
 export default Header;

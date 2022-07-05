@@ -1,4 +1,4 @@
-const { default: styled } = require("styled-components");
+const { default: styled } = require('styled-components');
 
 export const Navbar = styled.nav`
   height: ${(props) => props.theme.heights.headerHeight};
@@ -12,8 +12,7 @@ export const Navbar = styled.nav`
 
 export const NavMenu = styled.div`
   position: fixed;
-  top: ${(props) =>
-    props.toggle ? props.theme.heights.headerHeight : "-100%"};
+  top: ${(props) => (props.toggle ? props.theme.heights.headerHeight : '-100%')};
   left: 0;
   width: 100%;
   padding-top: 1.5rem;
@@ -64,14 +63,17 @@ export const NavList = styled.ul`
     display: flex;
   }
 `;
-export const NavToggle = styled.a`
+export const NavToggle = styled.button`
   color: ${(props) => props.theme.colors.firstColorLighter};
   font-size: 1.3rem;
+  background-color: inherit;
   cursor: pointer;
   @media ${(props) => props.theme.breakpoints.md} {
     display: none;
   }
 `;
-export const NavLogo = styled.a`
+export const NavLogo = styled.img`
   color: ${(props) => props.theme.colors.firstColorLighter};
+  width:3rem;
+  height:auto;
 `;

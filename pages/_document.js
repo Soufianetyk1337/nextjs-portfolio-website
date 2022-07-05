@@ -42,7 +42,6 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             defer
           />
-          {/* <link rel="icon" href="/images/seizen.svg"></link> */}
         </Head>
         <body>
           <Main />

@@ -1,14 +1,11 @@
-import React from "react";
+import React from 'react';
+import Header from '../components/Header/Header';
 
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
-import { Container } from "./LayoutStyles";
-
-export const Layout = ({ children }) => {
+export function Layout({ children }) {
   return (
     <>
       <Header />
-      <main style={{ overflow: "hidden" }}>{children}</main>
+      <main style={{ overflow: 'hidden' }}>{children}</main>
     </>
   );
-};
+}

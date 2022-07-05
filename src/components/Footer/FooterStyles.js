@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
   background-color: ${(props) => props.theme.colors.firstColorDark};
@@ -29,6 +29,7 @@ export const FooterDesc = styled.p`
 `;
 export const FooterCopyright = styled.p`
   font-size: ${(props) => props.theme.typography.smallerFontSize};
-  color: ${(props) => props.theme.colors.firstColorLight};
+  //color: ${(props) => props.theme.colors.firstColorLight};
+  color:#EBD8D8;
 `;
 export const FooterIcon = styled.i``;

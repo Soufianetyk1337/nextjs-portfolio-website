@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 export const ProjectsNav = styled.div`
   text-align: center;
@@ -18,12 +18,39 @@ export const ProjectsContainer = styled.div`
   }
 `;
 export const ProjectData = styled.div`
-  padding: 1.5rem;
+  padding: 1.1rem 0;
+`;
+export const ProjectButtonsContainer = styled.div`
+display: flex;
+ justify-content: space-between;
+  align-items: end;
+  flex-grow:1;
+`;
+export const ProjectImageWrapper = styled.div``;
+export const ProjectDescription = styled.p`
+font-size: ${(props) => props.theme.typography.smallFontSize};
+  color: ${(props) => props.theme.colors.firstColor};
+`;
+export const ProjectCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    height: 100%;
+`;
+
+export const ProjectImage = styled.img`
+  height: auto;
+  width: 100%;
+  transition: 0.4s;
 `;
 export const ProjectContent = styled.div`
   background-color: #fff;
   border-radius: 0.5rem;
   overflow: hidden;
+  padding: 1rem;
   box-shadow: 0 4px 6px rgba(174, 190, 250, 0.3);
   &:hover {
     box-shadow: 0 6px 8px rgba(174, 190, 250, 0.3);
@@ -32,20 +59,18 @@ export const ProjectContent = styled.div`
     transform: scale(1.02);
   }
 `;
-export const ProjectImage = styled.img`
-  height: auto;
-  width: 100%;
-  transition: 0.4s;
-`;
+
 export const ProjectImageLink = styled.a``;
-export const ProjectButton = styled.button`
+export const ProjectButton = styled.a`
   display: inline-block;
+  pointer-events: none;
   background-color: ${(props) => props.theme.colors.firstColorDark};
   color: ${(props) => props.theme.colors.firstColorLighter};
-  padding: 0.75rem 1rem;
+  padding: 0.75rem;
   border-radius: 0.25rem;
   transition: 0.3s;
-  margin-right: 2rem;
+  margin-right: ${(props) => (props.noMarginRight ? '0' : '2rem')};
+  pointer-events: ${(props) => (props.notDeployed ? 'none' : 'fill;')};
   &:hover {
     background-color: ${(props) => props.theme.colors.firstColorLight};
   }
@@ -61,35 +86,26 @@ export const ProjectTitle = styled.h2`
 `;
 
 export const TechnologiesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  align-items: center;
-  justify-content: center;
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  grid-gap: .5rem;
   margin: 1rem 0;
 `;
+export const TechnologiesItemText = styled.span``;
 export const TechnologiesItem = styled.a`
-  font-weight: 500;
-  font-size: 1rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  font-weight: 400;
+  font-size: .8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   align-items: baseline;
-  display: inline-flex;
+  width: max-content;
   border-radius: 9999px;
-  background-color: rgba(247, 247, 247, 1);
+  background-color: rgba(225, 219, 219, 1);
   cursor: pointer;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  color:#3E0E12;
   &:hover {
-    box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(92, 92, 92, 0.75);
+    transform: scale(1.1);
   }
 `;
 export const TechnologieImage = styled.img`

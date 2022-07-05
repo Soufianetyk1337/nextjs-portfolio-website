@@ -1,4 +1,5 @@
-const { default: styled } = require("styled-components");
+const { default: styled } = require('styled-components');
+
 export const List = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 200px));
@@ -39,6 +40,6 @@ export const ListParagraph = styled.div`
   font-weight: 600;
   padding: 18px 20px;
   letter-spacing: -0.9px;
-  color: #020061;
+  color: #000;
 `;
 export const ListTitle = styled.div``;
