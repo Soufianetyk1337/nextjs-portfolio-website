@@ -12,13 +12,15 @@ export default function Technologies() {
   return (
     <Section id="tech">
       <SectionTitle>Technologies & Tools</SectionTitle>
-      <SectionText
-        style={{ textAlign: 'left', margin: '0 auto', color: '#3E0E12' }}
-      >
-        This section contains all the technologies , programming languages and tools
-        that I have learnt until now. I am constantly learning, therefore I may
-        update this section more often.
-      </SectionText>
+      <div className="bodyContainer">
+        <SectionText
+          style={{ textAlign: 'left', margin: '0 auto', color: '#3E0E12' }}
+        >
+          This section contains all the technologies , programming languages and tools
+          that I have learnt until now. I am constantly learning, therefore I may
+          update this section more often.
+        </SectionText>
+      </div>
       <List>
         {
           TechnologiesAndTools.map((technologie) => (
