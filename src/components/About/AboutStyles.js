@@ -6,7 +6,6 @@ export const AboutData = styled.div`
   text-align: center;
 `;
 export const AboutDescription = styled.p`
-margin: 0 7.7rem;
 text-align: left;
 word-break: break-word;
 @media ${(props) => props.theme.breakpoints.md} {
