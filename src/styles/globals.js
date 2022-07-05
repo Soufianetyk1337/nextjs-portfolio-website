@@ -1,10 +1,13 @@
-import { createGlobalStyle } from "styled-components";
-import { normalize } from "styled-normalize";
+import {
+  createGlobalStyle,
+} from 'styled-components';
+import {
+  normalize,
+} from 'styled-normalize';
 
 const GlobalStyles = createGlobalStyle`
   ${normalize};
-  ${
-    "" /* @media screen and (max-width:768px){
+  ${'' /* @media screen and (max-width:768px){
     :root{
     --biggest-font-size:4.5rem;
     --h1-font-size:2.25rem;
@@ -95,13 +98,41 @@ const GlobalStyles = createGlobalStyle`
   .bodyGrid{
      display: grid;
   grid-gap: 1.5rem;
+  @media screen and (max-width: 320px){
+    margin:0 1rem
+  }  @media screen and (max-width: 640px){
+    margin:0 1rem
+  }
   }
   .activeProjectNavLink{
-    color:${(props) => props.theme.colors.firstColorDark};;
-    font-weight:${(props) => props.theme.weights.fontSemiBold};;
+    color:${(props) => props.theme.colors.firstColorDark};
+    font-weight:${(props) => props.theme.weights.fontSemiBold};
   }
-  
-  
+  .glassMorphism{
+    background: rgba( 226, 226, 226, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 9.5px );
+    -webkit-backdrop-filter: blur( 9.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+  .resetCanvaStyle{
+    width:100% !important;
+    height:100% !important;
+    position:relative;
+    z-index:-1;
+  }
+  #tsparticles {
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 0; 
+}
 `;
 
 export default GlobalStyles;
