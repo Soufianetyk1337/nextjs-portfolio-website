@@ -49,6 +49,38 @@ export const githubProjects = [{
 },
 {
   image: {
+    src: '/images/hpo-tv.jpg',
+    alt: 'Crypronews website image',
+    width: 270,
+    height: 180,
+    layout: 'responsive',
+  },
+  projectType: 'Front End',
+  title: 'Entertainment Web App',
+  description: 'This is a multi-page front end solution to the Frontend Mentor Entertainment web app challenge design to code.',
+  tags: [
+    {
+      name: 'React',
+      link: 'https://beta.reactjs.org/',
+    }, {
+      name: 'Sass',
+      link: 'https://sass-lang.com/',
+    },
+    {
+      name: 'Vite',
+      link: 'https://vitejs.dev/',
+    },
+    {
+      name: 'Context API',
+      link: 'https://reactjs.org/docs/context.html',
+    },
+  ],
+  source: 'https://github.com/Soufianetyk1337/Entertainment-web-app',
+  link: 'https://hpo-tv.vercel.app/',
+  id: 1,
+},
+{
+  image: {
     src: '/images/express-restapi-docs.jpg',
     alt: 'express rest api iamge',
     width: 270,
@@ -57,7 +89,7 @@ export const githubProjects = [{
   },
   projectType: 'Back End',
   title: 'Express REST API',
-  description: 'REST API for users that offers a lot of functionalities like login, reset password, sessions, and rate-limiting the API so that it cant get DDosed',
+  description: 'REST API for users that offers a lot of functionalities like login, reset password, sessions, and rate-limiting to prevent DDosing',
   tags: [
     {
       name: 'Express',
@@ -84,7 +116,7 @@ export const githubProjects = [{
   ],
   source: 'https://github.com/Soufianetyk1337/react-graphql-firebase-ecommerce-store',
   link: 'https://express-restapi.xyz/',
-  id: 1,
+  id: 2,
 },
 {
   image: {
@@ -123,7 +155,7 @@ export const githubProjects = [{
   ],
   source: 'https://github.com/Soufianetyk1337/REST-API-with-NodeJS-Express-MongoDB',
   link: '',
-  id: 2,
+  id: 3,
 },
 ];
 const styles = {
